@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>🕶️ CyberSecurity Journey</title>
+    <meta name="description" content="Dark, elite, highly-animated dashboard showcasing a complete CyberSecurity Journey — Offensive, Defensive, and Compliance." />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <canvas id="particles"></canvas>
+    <div class="gradient-bg"></div>
+
+    <header class="hero reveal">
+      <div class="hero-inner container">
+        <h1 class="title">CyberSecurity Journey</h1>
+        <p class="kicker">Offensive • Defensive • Compliance • Exploitation</p>
+        <p class="subtitle">
+          From Enumeration to Exploitation. From Weak Configurations to Hardened Systems.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <!-- Overview Cards -->
+      <section class="section container" id="overview">
+        <h2 class="section-title reveal">Overview</h2>
+        <div class="card-grid">
+          <div class="card stat reveal">
+            <div class="label">Platform</div>
+            <div class="value">Independent Cybersecurity Practice</div>
+          </div>
+          <div class="card stat reveal">
+            <div class="label">Duration</div>
+            <div class="value">02 July 2025 – 02 September 2025</div>
+          </div>
+          <div class="card stat reveal">
+            <div class="label">Environment</div>
+            <div class="value">Kali Linux & Windows 11</div>
+          </div>
+          <div class="card stat reveal">
+            <div class="label">Domains</div>
+            <div class="value">Penetration Testing | System Hardening | Compliance</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Offensive Security -->
+      <section class="section container" id="offensive">
+        <h2 class="section-title reveal">Offensive Security — HackTheBox</h2>
+        <div class="info-row reveal">
+          <div class="pill">Machine: <strong>TombWatcher</strong></div>
+          <div class="pill">OS: <strong>Windows</strong></div>
+          <div class="pill">Difficulty: <strong>Medium</strong></div>
+          <div class="pill pwned">Status: <strong>💀 PWNED</strong></div>
+          <div class="pill">Pwn Date: <strong>17 July 2025</strong></div>
+        </div>
+
+        <div class="flow reveal">
+          <div class="flow-item">Kali Linux</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item">Nmap Recon</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item">Web Enumeration</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item">/login.aspx Discovery</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item key">LFI Exploit (custom Python script)</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item">Reverse Shell</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item">Privilege Escalation</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-item">user.txt & root.txt captured</div>
+        </div>
+
+        <div class="confirm reveal">
+          <span class="badge success">✓ LFI highlighted as key vulnerability</span>
+          <span class="badge success">✓ Compromise confirmed</span>
+        </div>
+
+        <div class="screenshots reveal">
+          <div class="screenshot-ref">TombWatcher.png</div>
+          <div class="screenshot-ref">TombWatcher_Pwned.png</div>
+        </div>
+
+        <div class="actions reveal">
+          <button class="btn evidence-btn" data-group="lfi">View LFI Evidence 💀</button>
+        </div>
+      </section>
+
+      <!-- Tools & Commands Matrix -->
+      <section class="section container" id="tools">
+        <h2 class="section-title reveal">Tools & Commands Matrix</h2>
+        <div class="table-controls reveal">
+          <input id="search" type="search" placeholder="Search tools, commands, purpose..." aria-label="Search tools" />
+          <select id="statusFilter" aria-label="Filter by status">
+            <option value="all">All</option>
+            <option value="success">Success</option>
+            <option value="failed">Failed</option>
+          </select>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="data-table" aria-describedby="tools-desc">
+            <caption id="tools-desc" class="sr-only">Searchable and filterable matrix of tools, commands, purpose, and status.</caption>
+            <thead>
+              <tr>
+                <th>Tool Name</th>
+                <th>Command Used</th>
+                <th>Purpose</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="toolsBody">
+              <!-- Loaded from assets/data/tools.json or JS fallback -->
+            </tbody>
+          </table>
+        </div>
+        <div class="legend reveal">
+          <span class="legend-item"><span class="dot ok"></span> Success</span>
+          <span class="legend-item"><span class="dot bad"></span> Failed</span>
+        </div>
+      </section>
+
+      <!-- Defensive Security -->
+      <section class="section container" id="defensive">
+        <h2 class="section-title reveal">Defensive Security — CIS-CAT</h2>
+        <div class="card-grid">
+          <div class="card reveal">
+            <div class="label">System</div>
+            <div class="value">Windows 11</div>
+          </div>
+          <div class="card reveal">
+            <div class="label">Tool</div>
+            <div class="value">CIS-CAT Assessor Lite v4</div>
+          </div>
+        </div>
+
+        <div class="progress-block reveal">
+          <div class="progress-labels">
+            <span>Initial Compliance: <strong>20.54%</strong></span>
+            <span>Final Compliance: <strong>70%+</strong></span>
+          </div>
+          <div class="progressbar" data-start="20.54" data-end="72">
+            <div class="bar"><span class="bar-fill"></span></div>
+            <div class="progress-value">20.54%</div>
+          </div>
+        </div>
+
+        <div class="fixes reveal">
+          <h3 class="sub-title">Fixes Applied</h3>
+          <ul class="bullets">
+            <li>Guest account disabled</li>
+            <li>SMBv1 disabled</li>
+            <li>Firewall enabled</li>
+            <li>Password & lockout policies hardened</li>
+          </ul>
+        </div>
+
+        <div class="screenshots reveal">
+          <div class="screenshot-ref">CIS_CAT_Success_Report.png</div>
+        </div>
+
+        <div class="actions reveal">
+          <button class="btn evidence-btn" data-group="ciscat">View CIS-CAT Evidence 🛡️</button>
+        </div>
+      </section>
+
+      <!-- Success & Validation -->
+      <section class="section container" id="success">
+        <h2 class="section-title reveal">Success & Validation</h2>
+        <div class="card-grid">
+          <div class="card glow pulse reveal">💀 HackTheBox machine successfully compromised</div>
+          <div class="card glow pulse reveal">🛡️ System hardened using CIS benchmarks</div>
+          <div class="card glow pulse reveal">📈 Compliance improved by more than 40%</div>
+        </div>
+      </section>
+
+      <!-- Learnings & Impact -->
+      <section class="section container" id="learnings">
+        <h2 class="section-title reveal">Learnings & Impact</h2>
+        <ul class="bullets reveal">
+          <li>Real-world red-team methodology</li>
+          <li>Importance of failed attempts and pivoting</li>
+          <li>Vulnerability chaining</li>
+          <li>Compliance auditing & remediation</li>
+          <li>Professional security documentation</li>
+        </ul>
+      </section>
+
+      <!-- Evidence (on-demand) -->
+      <section class="section container" id="evidence">
+        <h2 class="section-title reveal">Evidence</h2>
+        <p class="subtitle reveal">Screenshots load only on request to keep things fast and clean.</p>
+        <div class="evidence-grid reveal">
+          <button class="btn evidence-btn" data-group="success">Success Proof</button>
+          <button class="btn evidence-btn" data-group="enumeration">Enumeration</button>
+          <button class="btn evidence-btn" data-group="nmap">Nmap</button>
+          <button class="btn evidence-btn" data-group="web">Web Enumeration / Gobuster</button>
+          <button class="btn evidence-btn" data-group="lfi">Exploitation — LFI</button>
+          <button class="btn evidence-btn" data-group="smb">SMB Enumeration</button>
+          <button class="btn evidence-btn" data-group="ciscat">CIS-CAT</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal / Lightbox for Evidence -->
+    <div id="evidenceModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Evidence Viewer">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-content" role="document">
+        <div class="modal-header">
+          <h3 class="modal-title">Evidence</h3>
+          <button class="modal-close" aria-label="Close" title="Close" data-close>✕</button>
+        </div>
+        <div id="evidenceGrid" class="modal-grid" tabindex="0" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+    <footer class="footer container">
+      <p>This dashboard is for educational and portfolio purposes only.</p>
+      <p style="margin-top:6px;color:#9bb0c7;font-size:0.95rem">Use only in authorized labs (e.g., HackTheBox, local test systems). Do not misuse; you are responsible for your actions.</p>
+    </footer>
+
+    <script defer src="assets/js/app.js"></script>
+  </body>
+  </html>

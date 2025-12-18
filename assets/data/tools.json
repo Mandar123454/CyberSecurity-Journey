@@ -1,0 +1,17 @@
+[
+  { "tool": "OpenVPN", "command": "openvpn --config htb.ovpn", "purpose": "Connect to HTB network", "status": "success" },
+  { "tool": "Ping", "command": "ping -c 4 10.10.11.123", "purpose": "ICMP reachability", "status": "success" },
+  { "tool": "Nmap", "command": "nmap -sC -sV -oN scans/initial 10.10.11.123", "purpose": "Service discovery", "status": "success" },
+  { "tool": "WhatWeb", "command": "whatweb http://10.10.11.123", "purpose": "Web fingerprinting", "status": "success" },
+  { "tool": "Gobuster", "command": "gobuster dir -u http://10.10.11.123 -w /usr/share/wordlists/dirb/common.txt", "purpose": "Directory brute-force", "status": "success" },
+  { "tool": "Curl", "command": "curl -i http://10.10.11.123/login.aspx", "purpose": "Endpoint probing", "status": "success" },
+  { "tool": "Burp Suite", "command": "Intercept + Repeater", "purpose": "Request tampering & fuzzing", "status": "success" },
+  { "tool": "Enum4Linux", "command": "enum4linux -a 10.10.11.123", "purpose": "SMB enumeration", "status": "success" },
+  { "tool": "smbclient", "command": "smbclient -N -L \\\\10.10.11.123\\\\", "purpose": "Anonymous SMB listing", "status": "failed" },
+  { "tool": "FTP", "command": "ftp 10.10.11.123 (anonymous)", "purpose": "Anonymous FTP", "status": "failed" },
+  { "tool": "SSH", "command": "ssh user@10.10.11.123", "purpose": "Shell access", "status": "failed" },
+  { "tool": "Custom Python LFI script", "command": "python3 lfi.py \"../../web.config\"", "purpose": "Local File Inclusion exploitation", "status": "success" },
+  { "tool": "icacls", "command": "icacls C:\\\\inetpub\\\\wwwroot\\\\", "purpose": "Check file permissions (Windows)", "status": "success" },
+  { "tool": "accesschk.exe", "command": "accesschk.exe -uwcqv \"Users\" *", "purpose": "Privilege audit (Windows)", "status": "success" },
+  { "tool": "SQL Injection Attempts", "command": "' OR 1=1 --  in login field", "purpose": "SQLi probe", "status": "failed" }
+]
